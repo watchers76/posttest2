@@ -1,0 +1,37 @@
+#PROGRAM KONVERSI SUHU
+pilihan = "0"
+def memilih():
+    print("===========================================")
+    print("""KONVERSI SUHU Pilih konversi di bawah ini:
+    1. Fahrenheit ke Celsius
+    2. Kelvin ke Celsius
+    3. Reamur ke Celsius
+    4. Keluar""")
+    print("===========================================")
+    pilihan = input("Pilih Konversi : ")
+    return pilihan
+
+while pilihan != "4":
+  pilihan = memilih()
+  if pilihan == "1":
+    print("===========================================")
+    fahrenheit = float(input("Suhu fahrenheit  : "))
+    celcius = (5 / 9) * (fahrenheit - 32)
+    print ("suhu celcius :", celcius, "C")
+    print("===========================================")
+
+  elif pilihan == "2":
+    print("===========================================")
+    kelvin = float(input("suhu kelvin : "))
+    celcius = kelvin - 273.15
+    print ("suhu Celcius :", celcius, "C")
+    print("===========================================")
+
+  elif pilihan == "3":
+    print("===========================================")
+    reamur = float(input("suhu reamur : "))
+    celcius = (5 / 4) * reamur
+    print ("suhu Celcius :", celcius, "C")
+    print("===========================================")
+print("===========================================")
+print("Terima kasih!")
