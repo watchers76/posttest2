@@ -1,0 +1,45 @@
+#Program Data Mahasiswa
+pilihan = "0"
+
+read = {
+  "nim": "",
+  "nama": "",
+  "umur": 0,
+  "prodi": "",
+  "ipk": 0,
+}
+
+def memilih():
+  print("""
+DATA MAHASISWA
+Pilih menu di bawah ini:
+1. Lihat Data
+2. Ubah Data
+3. Keluar
+  """)
+  pilihan = input("Pilih menu : ")
+  return pilihan
+  
+
+while pilihan != "3":
+  pilihan = memilih()
+  if pilihan == "1":
+    print(f"""
+DATA MAHASISWA
+Nim: {read["nim"]}
+Nama: {read["nama"]}
+Umur: {read["umur"]}
+Prodi: {read["prodi"]}
+IPK : {float(read["ipk"])}
+  """)
+
+  elif pilihan == "2":
+
+    read["nim"] = input("Masukkan Nim: ")
+    read["nama"] = input("Masukkan Nama: ")
+    read["umur"] = input("Masukkan Umur: ")
+    read["prodi"] = input("Masukkan Prodi: ")
+    read["ipk"] = input("Masukkan IPK: ")
+    print("Data anda sudah tersimpan!")
+
+print("Terima kasih!")
